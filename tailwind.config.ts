@@ -27,6 +27,7 @@ export default {
     },
     colors: {
       blue: {
+        lighter: '#004BE9',
         light: '#2643E4',
         DEFAULT: '#15157E',
         dark: '#030B34',

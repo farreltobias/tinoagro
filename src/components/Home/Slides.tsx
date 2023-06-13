@@ -19,9 +19,9 @@ export const Slides = () => {
             </h2>
           </div>
           <div className="flex h-1 gap-5">
-            <div className="h-full w-12 bg-green-light" />
-            <div className="h-full w-24 bg-blue-darker" />
-            <div className="h-full w-12 bg-green-light" />
+            <div className="h-full w-12 rounded-[1px] bg-green-light" />
+            <div className="h-full w-24 rounded-[1px] bg-blue-darker" />
+            <div className="h-full w-12 rounded-[1px] bg-green-light" />
           </div>
         </div>
         <button className="h-full bg-blue-darker px-6">

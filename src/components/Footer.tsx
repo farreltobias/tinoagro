@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="flex w-full flex-col items-center rounded-t-[4rem] bg-blue text-sm text-white">
       <Logo className="my-20" />
-      <div className="container mb-11 flex flex-col gap-8">
+      <div className="container mb-11 flex max-w-screen-lg flex-col gap-8">
         <ul className="flex w-full justify-between">
           {React.Children.toArray(
             items.map(({ title, links }) => (
@@ -149,7 +149,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
       <div className="w-full bg-[#091662] py-7">
-        <ul className="container flex gap-5 pl-12 text-gray-light">
+        <ul className="container flex max-w-screen-lg gap-5 pl-12 text-gray-light">
           {React.Children.toArray(
             footerItems.map(({ label, href }) => (
               <li>
