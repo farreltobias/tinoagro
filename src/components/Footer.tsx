@@ -107,7 +107,7 @@ const footerItems = [
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="flex w-full flex-col items-center rounded-t-[4rem] bg-blue text-sm text-white">
+    <footer className="relative z-50 -mt-[4rem] flex w-full flex-col items-center rounded-t-[4rem] bg-blue text-sm text-white shadow-[0_-26px_94px] shadow-[rgba(0,0,0,0.15)]">
       <Logo className="my-20" />
       <div className="container mb-11 flex max-w-screen-lg flex-col gap-8">
         <ul className="flex w-full justify-between">

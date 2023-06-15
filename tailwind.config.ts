@@ -45,6 +45,7 @@ export default {
         light: '#D9D9D9',
         DEFAULT: '#F5F5F5',
         dark: '#9F9F9F',
+        semi: '#616161',
         darker: '#4F4F4F',
       },
     },

@@ -2,6 +2,7 @@
 
 import { NextPage } from 'next';
 
+import { About } from '@/components/Home/About';
 import { CallToAction } from '@/components/Home/CallToAction';
 import { Contact } from '@/components/Home/Contact';
 import { Grass } from '@/components/Home/Grass';
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         <Results />
       </div>
       <Contact />
+      <About />
     </article>
   );
 };
