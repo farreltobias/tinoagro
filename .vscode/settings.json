@@ -1,5 +1,6 @@
 {
   "conventionalCommits.scopes": [
-    "About"
+    "About",
+    "Results"
   ]
 }

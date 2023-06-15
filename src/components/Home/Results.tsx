@@ -1,7 +1,31 @@
 import React from 'react';
 import Image from 'next/image';
 
+import Arrow from '@public/results-arrow.svg';
+
 import grass from '@public/grass-drawing.png';
+
+const results = [
+  {
+    title: 'Aumento de 10%',
+    description:
+      'na acuracidade das previsões de safra com a utilização das soluções de análise de dados da Tinoagro;',
+  },
+  {
+    title: 'Aumento de 5%',
+    description: 'na rentabilidade das fazendas monitoradas pela Tinoagro;',
+  },
+  {
+    title: 'Aumento de 10%',
+    description:
+      'na acuracidade das previsões de safra com a utilização das soluções de análise de dados da Tinoagro;',
+  },
+  {
+    title: 'Aumento de 30%',
+    description:
+      'na eficiência do uso de recursos hídricos com a utilização das soluções de monitoramento de irrigação da Tinoagro;',
+  },
+];
 
 export const Results: React.FC = () => {
   return (
@@ -12,22 +36,24 @@ export const Results: React.FC = () => {
           Nossos resultados
         </h2>
       </div>
-      <div className="flex items-center gap-44">
+      <div className="relative flex items-center gap-44">
         <Image src={grass} alt="grass" className="w-52 object-contain" />
-        {/* <div className="relative w-full"> */}
-        <ul className="flex h-32 gap-20">
+        <Arrow className="absolute left-40" />
+
+        <ul className="flex gap-10">
           {React.Children.toArray(
-            Array.from({ length: 4 }).map(() => (
-              <li className="h-full w-40">
-                <p>
-                  Aumento de 10% na acuracidade das previsões de safra com a
-                  utilização das soluções de análise de dados da Tinoagro;
+            results.map(({ description, title }) => (
+              <li className="h-32 w-[12vw] opacity-40 first:opacity-100">
+                <p className="line-clamp-4 flex flex-col">
+                  <span className="inline-block font-bold text-green">
+                    {title}
+                  </span>
+                  {description}
                 </p>
               </li>
             )),
           )}
         </ul>
-        {/* </div> */}
       </div>
     </div>
   );
