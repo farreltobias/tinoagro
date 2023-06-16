@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "About",
     "Results",
-    "CallToAction"
+    "CallToAction",
+    "Grass"
   ]
 }
