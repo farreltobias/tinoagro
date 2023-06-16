@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "About",
-    "Results"
+    "Results",
+    "CallToAction"
   ]
 }

@@ -18,21 +18,30 @@ export const CallToAction: React.FC = () => {
       <div
         className={classNames('absolute inset-0 -top-24 -z-10', background)}
       />
-      {/* <Background className="absolute inset-0 -top-24 -z-10 object-contain" /> */}
+
       <Image className="absolute top-0 -z-10" src={farm} alt="background" />
-      <Icon className="absolute right-0 top-0 -z-10 opacity-[0.04]" />
-      {/* <Image
-        className="absolute -top-24 -z-10 "
-        src={Background}
-        alt="background"
-      /> */}
+      <Icon className="absolute right-0 -z-10 h-1/2 w-1/2 opacity-[0.04]" />
 
       <div className="container flex">
-        <Image
-          src={tablet}
-          alt="tablet"
-          className="-mb-8 -mr-16 ml-10 h-1/4 w-1/2 flex-1 self-end object-contain"
-        />
+        <div className="relative -mb-8 -mr-16 ml-10 h-1/4 flex-1 self-end">
+          <div className="absolute -top-6 left-32 h-44 w-[1px] bg-green">
+            <div className="relative flex">
+              <div className="absolute right-6 h-2 w-2 -translate-y-1/2 rounded bg-green" />
+              <p className="absolute ml-4 w-24 -translate-y-1/2 text-xs font-semibold text-white">
+                Alto potencial de Lucro
+              </p>
+            </div>
+          </div>
+          <div className="absolute left-64 h-44 w-[1px] bg-white">
+            <div className="relative flex">
+              <div className="absolute right-6 h-2 w-2 -translate-y-1/2 rounded bg-white" />
+              <p className="absolute ml-4 w-24 -translate-y-1/2 text-xs font-semibold text-white">
+                Aumento de produtividade em 12%
+              </p>
+            </div>
+          </div>
+          <Image src={tablet} alt="tablet" priority />
+        </div>
 
         <div className="mb-20 mt-24 w-1/2 text-white">
           <div className="flex w-3/5 flex-col gap-8">
