@@ -1,8 +1,6 @@
-import Link from 'next/link';
-
 import Logo from '@public/logo.svg';
 
-import { classNames } from '@/utils/classNames';
+import { Solution } from './Solution';
 
 const solutions = [
   {
@@ -47,36 +45,13 @@ export const Solutions: React.FC = () => {
           <Logo className="h-14 w-64" />
         </div>
       </div>
-      <ul className="flex items-center gap-6">
-        {solutions.map(({ description, detailsHref, title, selected }) => (
-          <li
-            className={classNames(
-              'rounded-2xl p-6',
-              selected
-                ? 'flex-[1_1_27.5%] bg-white pb-12 pt-20 text-gray-darker'
-                : 'h-[20rem] flex-[1_1_25%] bg-gradient-to-tr from-[rgba(255,255,255,0.17)] from-[-15%] via-[rgba(25,70,73,0.17)] via-65% to-[rgba(10,19,70,0.17)] to-95% pt-16',
-            )}
-          >
-            <section className="flex h-full flex-col gap-6 text-xs">
-              <header className="flex w-[72.5%] flex-col gap-1">
-                <h1
-                  className={classNames(
-                    'h-16 text-2xl font-bold',
-                    selected ? 'text-blue' : '',
-                  )}
-                >
-                  {title}
-                </h1>
-                <h2 className="order-first text-green">Tinoagro</h2>
-              </header>
-              <p className="w-11/12">{description}</p>
-              <footer className="mt-auto">
-                <Link href={detailsHref} className="font-semibold">
-                  + <span className="text-green">Detalhes</span>
-                </Link>
-              </footer>
-            </section>
-          </li>
+      <ul className="flex h-96 items-center justify-between gap-6">
+        {solutions.map(({ description, detailsHref, title }) => (
+          <Solution
+            description={description}
+            detailsHref={detailsHref}
+            title={title}
+          />
         ))}
       </ul>
     </div>

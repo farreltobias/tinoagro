@@ -20,7 +20,7 @@ export const CallToAction: React.FC = () => {
       />
 
       <Image className="absolute top-0 -z-10" src={farm} alt="background" />
-      <Icon className="absolute right-0 -z-10 h-1/2 w-1/2 opacity-[0.04]" />
+      <Icon className="absolute right-0 top-20 -z-10 h-1/2 w-1/2 opacity-[0.04]" />
 
       <div className="container flex">
         <div className="relative -mb-8 -mr-16 ml-10 h-1/4 flex-1 self-end">
