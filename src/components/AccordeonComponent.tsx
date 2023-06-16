@@ -38,7 +38,7 @@ const AccordionComponent = ({ item: { id, title, description } }: Props) => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0, marginTop: 0 }}
-            animate={{ opacity: 1, height: 'auto', marginTop: 36 }}
+            animate={{ opacity: 1, height: isOpen ? 'auto' : 0, marginTop: 36 }}
             exit={{ opacity: 0, height: 0, marginTop: 0 }}
             transition={{ duration: 0.3 }}
           >

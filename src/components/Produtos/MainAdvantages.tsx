@@ -35,6 +35,8 @@ const mockAccordeon = [
 ];
 
 export default function MainAdvantages({}: Props) {
+  const halfLength = Math.ceil(mockAccordeon.length / 2);
+
   return (
     <section className="bg-blue py-44 text-white">
       <div className="container max-w-screen-lg">
@@ -50,10 +52,18 @@ export default function MainAdvantages({}: Props) {
           </p>
         </div>
 
-        <div className="grid w-full grid-cols-2 gap-4">
-          {mockAccordeon.map((item) => (
-            <AccordionComponent item={item} key={item.id} />
-          ))}
+        <div className="flex w-full gap-3">
+          <div className="flex w-1/2 flex-col gap-3">
+            {mockAccordeon.slice(0, halfLength).map((item) => (
+              <AccordionComponent item={item} key={item.id} />
+            ))}
+          </div>
+
+          <div className="flex w-1/2 flex-col gap-3">
+            {mockAccordeon.slice(halfLength).map((item) => (
+              <AccordionComponent item={item} key={item.id} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
