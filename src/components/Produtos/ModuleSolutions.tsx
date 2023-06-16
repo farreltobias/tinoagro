@@ -41,7 +41,7 @@ const mockModulos = [
 
 export default function ModuleSolutions() {
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col pb-64">
       <section className="bg-gray py-20 text-blue-light">
         <div className="container flex max-w-screen-lg items-start justify-between">
           <h3 className="w-full max-w-[480px] text-[43px] font-bold leading-[53px] text-blue">
