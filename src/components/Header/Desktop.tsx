@@ -35,29 +35,31 @@ type Props = {
   background: string;
 };
 
-export const Header: React.FC<Props> = ({ background }) => {
+export const Desktop: React.FC<Props> = ({ background }) => {
   const isHome = usePathname() === '/';
 
   return (
     <header
       className={classNames(
-        'flex items-center justify-center border-b-[0.5px] border-white border-opacity-50 text-sm text-white',
+        'hidden items-center justify-center border-b-[0.5px] border-white border-opacity-50 text-sm text-white lg:flex',
         !isHome && background,
       )}
     >
       <Link href="/" className="m-4">
         <Logo />
       </Link>
-      <nav className="flex">
-        {React.Children.toArray(
-          items.map((item) => (
-            <div className="border-r-[0.5px] border-white border-opacity-50 p-8 last:border-none">
-              <Link href={item.href} key={item.label}>
-                {item.label}
-              </Link>
-            </div>
-          )),
-        )}
+      <nav>
+        <ul className="flex">
+          {React.Children.toArray(
+            items.map((item) => (
+              <li className="border-r-[0.5px] border-white border-opacity-50 p-8 last:border-none">
+                <Link href={item.href} key={item.label}>
+                  {item.label}
+                </Link>
+              </li>
+            )),
+          )}
+        </ul>
       </nav>
     </header>
   );

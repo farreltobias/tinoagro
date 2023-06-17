@@ -19,7 +19,11 @@ export const CallToAction: React.FC = () => {
         className={classNames('absolute inset-0 -top-24 -z-10', background)}
       />
 
-      <Image className="absolute top-0 -z-10" src={farm} alt="background" />
+      <Image
+        className="absolute top-0 -z-10 hidden lg:block"
+        src={farm}
+        alt="background"
+      />
       <Icon className="absolute right-0 top-20 -z-10 h-1/2 w-1/2 opacity-[0.04]" />
 
       <div className="container flex">
