@@ -52,7 +52,7 @@ export const Hamburguer: React.FC = () => {
   }, [setShow, show]);
 
   return (
-    <div className="absolute z-20 flex w-full px-9 py-16">
+    <div className="absolute z-20 flex w-full px-9 py-16 lg:hidden">
       <Link href="/" className="mx-auto">
         <Logo />
       </Link>
@@ -60,7 +60,7 @@ export const Hamburguer: React.FC = () => {
       <button
         aria-label="Abrir menu de navegação"
         onClick={handleClick}
-        className="absolute right-9 flex flex-col items-center justify-center lg:hidden"
+        className="absolute right-9 flex flex-col items-center justify-center"
       >
         <motion.div
           className="h-1 w-8 origin-top-left bg-white"
