@@ -21,6 +21,7 @@ export const Tabs: React.FC<TabsProps> = ({ tabs }) => {
           )),
         )}
       </Tab.List>
+
       <Tab.Panels>
         {React.Children.toArray(
           tabs.map(({ table }) => (
