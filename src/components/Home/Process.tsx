@@ -37,14 +37,14 @@ const process = [
 
 export const Process: React.FC = () => {
   return (
-    <div className="container my-40 flex max-w-screen-lg flex-col gap-24">
+    <div className="container my-20 flex max-w-screen-lg flex-col gap-24 lg:my-40">
       <div className="flex flex-col gap-16">
         <div className="h-3 w-3 rounded-full bg-green" />
         <div className="flex justify-between">
-          <h2 className="w-3/5 text-4xl font-bold leading-snug text-blue-dark">
+          <h2 className="w-full text-2xl font-bold leading-snug text-blue-dark sm:w-3/5 sm:text-4xl">
             Estudamos a fundo a sua operação, coletamos dados e damos soluções
           </h2>
-          <Icon className="opacity-25 [--color-a:#D1D1D1] [--color-b:#D1D1D1]" />
+          <Icon className="hidden opacity-25 [--color-a:#D1D1D1] [--color-b:#D1D1D1] sm:flex" />
         </div>
       </div>
       <div className="relative">
