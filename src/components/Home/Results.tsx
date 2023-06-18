@@ -29,23 +29,24 @@ const results = [
 
 export const Results: React.FC = () => {
   return (
-    <div className="container mt-6 flex max-w-screen-lg flex-col gap-20">
+    <div className="container mt-6 flex max-w-screen-lg flex-col gap-10 lg:gap-20">
       <div className="flex flex-col gap-8">
         <div className="h-3 w-3 rounded-full bg-green" />
         <h2 className="w-1/3 text-4xl font-bold leading-snug">
           Nossos resultados
         </h2>
       </div>
-      <div className="relative flex items-center gap-44">
-        <Image src={grass} alt="grass" className="w-52 object-contain" />
-        <Arrow className="absolute left-40" />
 
-        <ul className="flex gap-10">
+      <div className="relative flex flex-col items-center gap-20 lg:flex-row lg:gap-44">
+        <Image src={grass} alt="grass" className="w-52 object-contain" />
+        <Arrow className="absolute left-40  hidden lg:flex" />
+
+        <ul className="flex w-full gap-10 lg:w-auto">
           {React.Children.toArray(
             results.map(({ description, title }) => (
-              <li className="h-32 w-[12vw] opacity-40 first:opacity-100">
-                <p className="line-clamp-4 flex flex-col">
-                  <span className="inline-block font-bold text-green">
+              <li className="h-32 min-w-[13.75rem] opacity-40 first:opacity-100  lg:w-[11vw]">
+                <p className="line-clamp-4 flex flex-col text-sm">
+                  <span className="inline-block font-bold  text-green">
                     {title}
                   </span>
                   {description}
