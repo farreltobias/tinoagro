@@ -16,7 +16,7 @@ export const CallToAction: React.FC = () => {
     'bg-gradient-to-br bg-no-repeat from-blue-darker from-20% via-green-darker via-65% to-green-dark';
 
   return (
-    <div className="relative flex flex-col">
+    <div className="relative flex flex-col overflow-hidden">
       <div
         className={classNames('absolute inset-0 -top-24 -z-10', background)}
       />
@@ -77,7 +77,7 @@ export const CallToAction: React.FC = () => {
               className="flex w-full items-center justify-center gap-4 rounded border border-green p-5 text-center text-sm font-semibold xs:w-fit"
             >
               Conheça nossa solução
-              <FaLongArrowAltDown color="#fffff" />
+              <FaLongArrowAltDown color="#fffff" className="flex md:hidden" />
             </Link>
           </div>
         </div>

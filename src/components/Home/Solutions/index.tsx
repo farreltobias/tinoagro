@@ -52,6 +52,7 @@ export const Solutions: React.FC = () => {
             description={description}
             detailsHref={detailsHref}
             title={title}
+            key={title}
           />
         ))}
       </ul>

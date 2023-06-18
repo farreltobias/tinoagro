@@ -41,7 +41,7 @@ export const Header: React.FC<Props> = ({ background }) => {
   return (
     <header
       className={classNames(
-        'flex items-center justify-center border-b-[0.5px] border-white border-opacity-50 text-sm text-white',
+        'hidden items-center justify-center border-b-[0.5px] border-white border-opacity-50 text-sm text-white lg:flex',
         !isHome && background,
       )}
     >
