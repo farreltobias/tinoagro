@@ -18,21 +18,21 @@ export const Table: React.FC<TableProps> = ({ table }) => {
           )}
         </tr>
       </thead>
-      <tbody>
-        <tr className="grid grid-cols-2 gap-5 xs:grid-cols-3  sm:flex">
-          {React.Children.toArray(
-            table.map(({ description, title }) => (
-              <div className="flex w-full flex-col items-center justify-center">
+      <tbody className="grid grid-cols-2 gap-5 xs:grid-cols-3 sm:flex">
+        {React.Children.toArray(
+          table.map(({ description, title }) => (
+            <tr className="flex w-full justify-around">
+              <td className="flex w-full flex-col items-center justify-center">
                 <span className="mb-3 text-center text-sm font-bold text-[#030B34] sm:hidden">
                   {title}
                 </span>
-                <td className="flex-1 text-center text-xl text-gray-dark">
+                <span className="flex-1 text-center text-xl text-gray-dark">
                   {description}
-                </td>
-              </div>
-            )),
-          )}
-        </tr>
+                </span>
+              </td>
+            </tr>
+          )),
+        )}
       </tbody>
     </table>
   );
