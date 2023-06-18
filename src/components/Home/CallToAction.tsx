@@ -16,7 +16,7 @@ export const CallToAction: React.FC = () => {
     'bg-gradient-to-br bg-no-repeat from-blue-darker from-20% via-green-darker via-65% to-green-dark';
 
   return (
-    <div className="relative flex flex-col overflow-hidden">
+    <div className="relative flex flex-col ">
       <div
         className={classNames('absolute inset-0 -top-24 -z-10', background)}
       />
@@ -46,7 +46,7 @@ export const CallToAction: React.FC = () => {
           <Image src={tablet} alt="tablet" priority />
         </div>
 
-        <div className="mb-20 mt-24 w-full text-white md:w-1/2">
+        <div className="mb-20 mt-16 w-full text-white md:w-1/2">
           <div className="flex w-full flex-col gap-8 sm:w-3/5">
             <h1 className="whitespace-pre text-4xl font-bold leading-[1.10] xs:text-5xl">
               Gestão {'\n'}
@@ -56,14 +56,16 @@ export const CallToAction: React.FC = () => {
             </h1>
             <div className="relative flex w-full md:hidden">
               <ArrowDown />
-              <Image
-                src={tablet}
-                alt="tablet"
-                priority
-                className="absolute -right-[40%] -top-[35%]"
-              />
+              <div className="relative w-full">
+                <Image
+                  src={tablet}
+                  alt="tablet"
+                  priority
+                  className="-right-[40%] -top-[35%]"
+                />
+              </div>
             </div>
-            <h2 className="order-first flex flex-col gap-3 xs:items-center sm:flex-row">
+            <h2 className="order-first flex flex-col gap-3 xs:items-start sm:flex-row">
               <div className="mt-3 h-[2px] w-4 bg-green font-normal" />
               Nós te damos informações importa...
             </h2>
