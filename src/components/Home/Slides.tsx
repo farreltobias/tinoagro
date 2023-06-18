@@ -28,7 +28,7 @@ export const Slides = () => {
             <div className="h-full w-12 rounded-[1px] bg-green-light" />
           </div>
         </div>
-        <button className="hidden h-full bg-blue-darker px-6 md:flex">
+        <button className="hidden h-full items-center bg-blue-darker px-6 md:flex">
           <SlideArrow />
         </button>
       </div>

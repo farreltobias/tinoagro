@@ -30,21 +30,22 @@ const solutions = [
 
 export const Solutions: React.FC = () => {
   return (
-    <div className="container flex max-w-screen-lg flex-col gap-28">
+    <div className="container flex max-w-screen-lg flex-col gap-14 sm:gap-28">
       <div className="flex flex-col gap-12">
         <div className="h-3 w-3 rounded-full bg-green" />
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-5 sm:gap-0">
           <div className="flex flex-col gap-6">
-            <h2 className="w-2/5 text-4xl font-bold leading-snug">
+            <h2 className="w-full text-2xl font-bold leading-snug sm:w-2/5 sm:text-4xl">
               Uma solução específica para cada realidade
             </h2>
             <p className="text-sm">
               Veja como eles vão ajudar na sua gestão da sua propriedade rural
             </p>
           </div>
-          <Logo className="h-14 w-64" />
+          <Logo className="hidden h-14 w-64 xs:flex" />
         </div>
       </div>
+
       <ul className="flex h-96 items-center justify-between gap-6">
         {solutions.map(({ description, detailsHref, title }) => (
           <Solution

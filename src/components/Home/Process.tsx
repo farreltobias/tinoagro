@@ -40,6 +40,7 @@ export const Process: React.FC = () => {
     <div className="container my-20 flex max-w-screen-lg flex-col gap-24 lg:my-40">
       <div className="flex flex-col gap-16">
         <div className="h-3 w-3 rounded-full bg-green" />
+
         <div className="flex justify-between">
           <h2 className="w-full text-2xl font-bold leading-snug text-blue-dark sm:w-3/5 sm:text-4xl">
             Estudamos a fundo a sua operação, coletamos dados e damos soluções
@@ -66,7 +67,7 @@ export const Process: React.FC = () => {
             )),
           )}
         </ul>
-        <button className="absolute right-0 top-1/2 -translate-y-1/2">
+        <button className="absolute right-0 top-1/2 hidden -translate-y-1/2 sm:flex">
           <Arrow className="stroke-black" />
         </button>
       </div>
