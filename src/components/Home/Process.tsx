@@ -37,7 +37,7 @@ const process = [
 
 export const Process: React.FC = () => {
   return (
-    <div className="container my-20 flex max-w-screen-lg flex-col gap-24 overflow-hidden md:overflow-auto lg:my-40">
+    <div className="container my-20 mb-0 flex max-w-screen-lg flex-col gap-24 overflow-hidden sm:mb-7 md:overflow-auto lg:my-40 lg:mb-40">
       <div className="flex flex-col gap-16">
         <div className="h-3 w-3 rounded-full bg-green" />
 

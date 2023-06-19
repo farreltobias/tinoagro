@@ -32,7 +32,7 @@ export const Results: React.FC = () => {
     <div className="container mt-6 flex max-w-screen-lg flex-col gap-10 lg:gap-20">
       <div className="flex flex-col gap-8">
         <div className="h-3 w-3 rounded-full bg-green" />
-        <h2 className="w-1/3 text-4xl font-bold leading-snug">
+        <h2 className="w-1/3 text-2xl font-bold leading-snug sm:text-4xl">
           Nossos resultados
         </h2>
       </div>
