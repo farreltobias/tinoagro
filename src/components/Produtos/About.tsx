@@ -1,19 +1,53 @@
-const mockSolution = [
-  {
-    column1: ['Soja', 'Milho', 'Pastagens'],
-    column2: ['Café', 'Sorgo', 'Algodão'],
-    column3: ['Florestal', 'Citros', 'Cana-de-açúcar'],
-    column4: ['Frutas', 'Batata', 'Arroz'],
-  },
+import { useEffect, useState } from 'react';
+
+const itemsSolutions = [
+  'Soja',
+  'Milho',
+  'Pastagens',
+  'Café',
+  'Sorgo',
+  'Algodão',
+  'Florestal',
+  'Citros',
+  'Cana-de-açúcar',
+  'Frutas',
+  'Batata',
+  'Arroz',
 ];
 
 export const AboutProducts: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const columns = isMobile ? 2 : 4; // número de colunas baseado no layout
+  const mockSolution = [];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Defina o valor de 768 para o limite de largura em que você considera como mobile
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Executa a função uma vez para definir o valor inicial
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  for (let i = 0; i < columns; i++) {
+    const start = i * (isMobile ? 6 : 3); // ajuste dos índices de início
+    const end = start + (isMobile ? 6 : 3); // ajuste dos índices de fim
+    const columnItems = itemsSolutions.slice(start, end);
+    mockSolution.push({ [`column${i + 1}`]: columnItems });
+  }
+
+  console.log(mockSolution);
+
   return (
     <section className="min-h-[345px] bg-white py-10">
       <div className="container max-w-screen-lg">
         <div className="mb-10 flex flex-col items-start justify-start">
           <div className="mb-5 h-3 w-3 rounded bg-green"></div>
-          <h1 className="mb-8 text-5xl font-bold text-blue-defaulter">
+          <h1 className="mb-8 text-4xl font-bold text-blue-defaulter md:text-5xl">
             Tinoagro Linha Smart
           </h1>
 
@@ -27,39 +61,31 @@ export const AboutProducts: React.FC = () => {
           </p>
         </div>
 
-        <div className="z-[1] mx-auto max-h-14 w-full max-w-3xl">
+        <div className="relative z-[1] mx-auto w-full max-w-3xl shadow-lg  md:max-h-14">
           <div className="w-full rounded-t-lg bg-green px-4 py-4">
-            <p className="text-base font-semibold text-white">
+            <p className="text-center text-base font-semibold text-white">
               Nossas soluções abrangem uma ampla variedade de cultivos ,
               incluindo
             </p>
           </div>
 
           <div className="relative flex w-full justify-center gap-20 rounded-b-lg bg-gray px-4 py-4">
-            <ul className="">
-              <li className="text-sm font-medium text-black ">Soja</li>
-              <li className="text-sm font-medium text-black ">Milho</li>
-              <li className="text-sm font-medium text-black ">Pastagens</li>
-            </ul>
-            <ul>
-              <li className="text-sm font-medium text-black ">Café</li>
-              <li className="text-sm font-medium text-black ">Sorgo</li>
-              <li className="text-sm font-medium text-black ">Algodão</li>
-            </ul>
-
-            <ul>
-              <li className="text-sm font-medium text-black ">Florestal</li>
-              <li className="text-sm font-medium text-black ">Citros</li>
-              <li className="text-sm font-medium text-black ">
-                Cana-de-açúcar
-              </li>
-            </ul>
-
-            <ul>
-              <li className="text-sm font-medium text-black ">Frutas</li>
-              <li className="text-sm font-medium text-black ">Batata</li>
-              <li className="text-sm font-medium text-black ">Arroz</li>
-            </ul>
+            {mockSolution.map((column, index) => {
+              return (
+                <ul key={index}>
+                  {Object.values(column).map((items) =>
+                    items.map((item, subItemIndex) => (
+                      <li
+                        key={subItemIndex}
+                        className="mb-1 text-sm font-medium text-black"
+                      >
+                        {item}
+                      </li>
+                    )),
+                  )}
+                </ul>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -38,10 +38,12 @@ export default function MainAdvantages({}: Props) {
   const halfLength = Math.ceil(mockAccordeon.length / 2);
 
   return (
-    <section className="bg-blue py-44 text-white">
+    <section className="bg-blue py-14 text-white md:py-44">
       <div className="container max-w-screen-lg">
-        <div className="mb-20 flex w-full items-center justify-between gap-10">
-          <h2 className="text-[43px] font-bold ">Principais vantagens</h2>
+        <div className="mb-20 flex w-full flex-col items-start justify-between gap-10 text-start md:flex-row md:items-center">
+          <h2 className="text-4xl font-bold md:text-[43px] ">
+            Principais vantagens
+          </h2>
           <p className="w-full max-w-2xl text-sm font-medium">
             Proporcionamos uma melhoria substancial na produção agrícola,
             permitindo um controle minucioso de todas as etapas do processo
@@ -52,14 +54,14 @@ export default function MainAdvantages({}: Props) {
           </p>
         </div>
 
-        <div className="flex w-full gap-3">
-          <div className="flex w-1/2 flex-col gap-3">
+        <div className="flex w-full flex-col gap-3 md:flex-row">
+          <div className="flex w-full flex-col gap-3 md:w-1/2">
             {mockAccordeon.slice(0, halfLength).map((item) => (
               <AccordionComponent item={item} key={item.id} />
             ))}
           </div>
 
-          <div className="flex w-1/2 flex-col gap-3">
+          <div className="flex w-full flex-col gap-3 md:w-1/2">
             {mockAccordeon.slice(halfLength).map((item) => (
               <AccordionComponent item={item} key={item.id} />
             ))}

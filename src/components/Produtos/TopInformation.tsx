@@ -2,11 +2,11 @@ import Breadcrumbs from '../Breadcrumbs';
 
 export const TopInformation: React.FC = () => {
   return (
-    <div className="min-h-[80px] bg-gray ">
-      <div className="container flex min-h-inherit w-full max-w-screen-lg justify-between">
+    <div className="min-h-[80px] bg-gray pt-7 md:pt-0">
+      <div className="container flex min-h-inherit w-full max-w-screen-lg flex-col justify-between gap-5 md:flex-row">
         <Breadcrumbs />
 
-        <div className="flex w-full max-w-xs items-end justify-end gap-11">
+        <div className="flex w-full max-w-full items-end gap-11 md:max-w-xs md:justify-end">
           <div className="relative ">
             <p className="mb-4 text-base font-bold text-blue-darker">
               Linha Smart
