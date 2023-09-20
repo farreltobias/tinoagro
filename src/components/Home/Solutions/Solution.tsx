@@ -17,6 +17,7 @@ const variants = {
     paddingBottom: '1.5rem',
     paddingTop: '4rem',
     color: '#fff',
+    minWidth: '12.8125rem',
   },
   hover: {
     flex: '1 1 27.5%',
@@ -24,7 +25,6 @@ const variants = {
     paddingBottom: '3rem',
     paddingTop: '5rem',
     color: '#4F4F4F',
-    // height: '',
   },
 } satisfies Variants;
 
@@ -47,19 +47,20 @@ export const Solution: React.FC<Props> = ({
       variants={variants}
       initial="initial"
       whileHover="hover"
-      className="rounded-2xl bg-gradient-to-tr from-[rgba(255,255,255,0.17)] from-[-15%] via-[rgba(25,70,73,0.17)] via-65% to-[rgba(10,19,70,0.17)] to-95% p-6"
+      className="
+      rounded-2xl bg-gradient-to-tr from-[rgba(255,255,255,0.17)] from-[-15%] via-[rgba(25,70,73,0.17)] via-65% to-[rgba(10,19,70,0.17)] to-95% p-6"
     >
       <section className="flex h-full flex-col gap-6 text-xs">
         <header className="flex w-[72.5%] flex-col gap-1">
           <motion.h1
             variants={titleVariants}
-            className="h-16 text-2xl font-bold"
+            className="h-16 text-xl font-bold md:text-2xl"
           >
             {title}
           </motion.h1>
           <h2 className="order-first text-green">Tinoagro</h2>
         </header>
-        <p className="h-24 w-11/12">{description}</p>
+        <p className="h-[7rem] w-11/12">{description}</p>
         <footer className="mt-auto">
           <Link href={detailsHref} className="font-semibold">
             + <span className="text-green">Detalhes</span>

@@ -21,11 +21,12 @@ const Home: NextPage = () => {
       <Grass />
       <Slides />
       <Process />
-      <div className="rounded-t-[4rem] bg-blue pb-64 pt-32 text-white">
+      <div className="overflow-hidden rounded-t-[4rem] bg-blue pb-64 pt-32 text-white">
         <Solutions />
         <Working />
         <Results />
       </div>
+
       <Contact />
       <About />
     </article>

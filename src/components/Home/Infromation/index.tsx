@@ -90,15 +90,15 @@ export const Infromation: React.FC = () => {
         <div className="relative flex flex-col gap-9">
           <Info className="absolute -left-32 -top-full" />
           <div className="h-3 w-3 rounded-full bg-green" />
-          <h2 className="w-2/3 text-4xl font-bold leading-snug text-blue-dark">
+          <h2 className="w-2/3 text-2xl font-bold leading-snug text-blue-dark xs:text-4xl">
             Você sabe qual foi a safra mais rentável no último ano?
           </h2>
         </div>
         <div className="relative flex flex-col pb-16">
           <Tabs tabs={tabs} />
-          <div className="absolute bottom-0 right-10 flex gap-4">
+          <div className="absolute bottom-0 flex w-full gap-4 xs:right-10 xs:w-auto">
             <Arrow />
-            <span className="whitespace-pre pt-2 text-sm">
+            <span className="w-full whitespace-pre pt-2 text-sm ">
               A nossa solução te entrega essas {'\n'}informações de{' '}
               <span className="font-bold text-green">forma muito rápida!</span>
             </span>

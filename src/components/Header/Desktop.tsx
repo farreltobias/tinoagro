@@ -1,6 +1,7 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { HiMenu, HiX } from 'react-icons/hi';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -37,30 +38,55 @@ type Props = {
 
 export const Desktop: React.FC<Props> = ({ background }) => {
   const isHome = usePathname() === '/';
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header
       className={classNames(
-        'hidden items-center justify-center border-b-[0.5px] border-white border-opacity-50 text-sm text-white lg:flex',
+        'w-full border-b-[0.5px] border-white border-opacity-50',
         !isHome && background,
       )}
     >
-      <Link href="/" className="m-4">
-        <Logo />
-      </Link>
-      <nav>
-        <ul className="flex">
+      <div className="container flex max-w-screen-lg items-center justify-between lg:justify-center ">
+        <Link href="/" className="m-4 ml-0">
+          <Logo />
+        </Link>
+
+        <nav className="hidden md:flex">
           {React.Children.toArray(
-            items.map((item) => (
-              <li className="border-r-[0.5px] border-white border-opacity-50 p-8 last:border-none">
-                <Link href={item.href} key={item.label}>
+            items.map((item, index) => (
+              <div
+                className={`flex items-center justify-center border-r-[0.5px] border-white border-opacity-50 p-[13px] text-center text-[13px] font-semibold text-white last:border-none lg:p-[23px] ${
+                  index === items.length - 1 ? 'pr-0' : ''
+                }`}
+              >
+                <Link
+                  href={item.href}
+                  key={item.label}
+                  className="lg:py-[14px]"
+                >
                   {item.label}
                 </Link>
-              </li>
+              </div>
             )),
           )}
-        </ul>
-      </nav>
+        </nav>
+
+        <button
+          onClick={toggleMenu}
+          className="rounded-md p-2 text-white focus:outline-none focus:ring md:hidden"
+        >
+          {isOpen ? (
+            <HiX className="h-6 w-6" />
+          ) : (
+            <HiMenu className="h-6 w-6" />
+          )}
+        </button>
+      </div>
     </header>
   );
 };

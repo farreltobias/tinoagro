@@ -30,6 +30,7 @@ export default {
         lighter: '#004BE9',
         light: '#2643E4',
         DEFAULT: '#15157E',
+        defaulter: '#18256B',
         dark: '#030B34',
         darker: '#000D52',
       },
@@ -54,6 +55,9 @@ export default {
       //   'main-linear':
       //     'linear-gradient(127.29deg, rgba(0, 13, 82, 0.97) 20.55%, rgba(5, 107, 59, 0.97) 64.05%, rgba(11, 205, 36, 0.97) 109.13%);',
       // },
+      minHeight: {
+        inherit: 'inherit',
+      },
     },
   },
   plugins: [HeadlessUI],
