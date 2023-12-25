@@ -7,77 +7,65 @@ import { TabType } from '@/@types/tab';
 
 const tabs: TabType[] = [
   {
-    title: 'Milho safrinha 2022',
+    title: 'MILHO',
     table: [
       {
-        title: 'Investimento',
-        description: '100k',
+        title: 'Custo Operacional Efetivo (COE)',
+        description: '4,3K',
       },
       {
-        title: 'Custo fixos',
-        description: '34,3k',
+        title: 'Custo Operacional Total (COT)',
+        description: '4,7K',
       },
       {
-        title: 'Operação',
-        description: '300k',
+        title: 'Custo Total (CT)',
+        description: '5,6K',
       },
       {
-        title: 'Faturamento bruto',
-        description: '1,2m',
-      },
-      {
-        title: 'Lucro líquido',
-        description: '1,2m',
+        title: 'Receita Bruta (RB)',
+        description: '5,6K',
       },
     ],
   },
   {
-    title: 'Soja 2023',
+    title: 'SOJA',
     table: [
       {
-        title: 'Investimento',
-        description: '500k',
+        title: 'Custo Operacional Efetivo (COE)',
+        description: '5,3K',
       },
       {
-        title: 'Custo fixos',
-        description: '40,3k',
+        title: 'Custo Operacional Total (COT)',
+        description: '5,8K',
       },
       {
-        title: 'Operação',
-        description: '900k',
+        title: 'Custo Total (CT)',
+        description: '6,8K',
       },
       {
-        title: 'Faturamento bruto',
-        description: '2,2m',
-      },
-      {
-        title: 'Lucro líquido',
-        description: '3,2m',
+        title: 'Receita Bruta (RB)',
+        description: '9K',
       },
     ],
   },
   {
-    title: 'Trigo 2023',
+    title: 'ALGODÃO',
     table: [
       {
-        title: 'Investimento',
+        title: 'Custo Operacional Efetivo (COE)',
         description: '100k',
       },
       {
-        title: 'Custo fixos',
-        description: '34,3k',
+        title: 'Custo Operacional Total (COT)',
+        description: '13,6K',
       },
       {
-        title: 'Operação',
-        description: '300k',
+        title: 'Custo Total (CT)',
+        description: '16K',
       },
       {
-        title: 'Faturamento bruto',
-        description: '1,2m',
-      },
-      {
-        title: 'Lucro líquido',
-        description: '1,2m',
+        title: 'Receita Bruta (RB)',
+        description: '16,5K',
       },
     ],
   },
@@ -85,18 +73,22 @@ const tabs: TabType[] = [
 
 export const Infromation: React.FC = () => {
   return (
-    <div className="relative flex flex-col gap-10 bg-gray">
+    <article
+      tabIndex={0}
+      id="informations"
+      className="relative flex flex-col gap-10 bg-gray"
+    >
       <div className="container mt-20 flex max-w-4xl flex-col gap-10">
-        <div className="relative flex flex-col gap-9">
+        <header className="relative flex flex-col gap-9">
           <Info className="absolute -left-32 -top-full" />
           <div className="h-3 w-3 rounded-full bg-green" />
-          <h2 className="w-2/3 text-2xl font-bold leading-snug text-blue-dark xs:text-4xl">
+          <h1 className="w-2/3 text-2xl font-bold leading-snug text-blue-dark xs:text-4xl">
             Você sabe qual foi a safra mais rentável no último ano?
-          </h2>
-        </div>
+          </h1>
+        </header>
         <div className="relative flex flex-col pb-16">
           <Tabs tabs={tabs} />
-          <div className="absolute bottom-0 flex w-full gap-4 xs:right-10 xs:w-auto">
+          <div className="bottom-0 flex w-full pt-4 xs:right-10 xs:w-auto sm:absolute sm:gap-4 sm:pt-0">
             <Arrow />
             <span className="w-full whitespace-pre pt-2 text-sm ">
               A nossa solução te entrega essas {'\n'}informações de{' '}
@@ -105,6 +97,6 @@ export const Infromation: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };

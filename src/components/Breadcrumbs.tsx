@@ -1,7 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { FaChevronRight } from 'react-icons/fa';
 
-const pages = [{ name: 'Projects', href: '#', current: false }];
+const pages = [
+  { name: 'Nossos Produtos', href: '/produtos/slug', current: false },
+];
 
 export default function Breadcrumbs() {
   return (

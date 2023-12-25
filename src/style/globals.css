@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .swiper-pagination-bullet-primary {
+    @apply bg-gray-300 mx-2 flex h-1 w-8 origin-center cursor-pointer transition-all duration-300;
+  }
+
+  .swiper-pagination-bullet-active-primary {
+    @apply mx-2 flex h-1 w-16 cursor-pointer bg-green;
+  }
+
+  ul::-webkit-scrollbar {
+    width: 6px; /* Largura da barra de rolagem */
+  }
+  
+  ul::-webkit-scrollbar-thumb {
+    background-color: #4f4f4f; /* Cor do preenchimento da barra de rolagem */
+    border-radius: 3px; /* Raio de borda da barra de rolagem */
+  }
+}

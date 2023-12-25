@@ -7,44 +7,51 @@ import grass from '@public/grass-drawing.png';
 
 const results = [
   {
-    title: 'Aumento de 10%',
+    title: 'Redução significativa',
     description:
-      'na acuracidade das previsões de safra com a utilização das soluções de análise de dados da Tinoagro;',
+      'nos custos logísticos e melhoria na eficiência da distribuição dos produtos agrícolas.',
   },
   {
-    title: 'Aumento de 5%',
-    description: 'na rentabilidade das fazendas monitoradas pela Tinoagro;',
+    title: 'Aumento na produtividade',
+    description: 'e redução das perdas devido a uma melhor gestão do momento de plantio.',
   },
   {
-    title: 'Aumento de 10%',
+    title: 'Aumento nas vendas',
     description:
-      'na acuracidade das previsões de safra com a utilização das soluções de análise de dados da Tinoagro;',
+      'e melhoria na margem de lucro por meio de uma estratégia de precificação mais eficaz.',
   },
   {
-    title: 'Aumento de 30%',
+    title: 'Melhoria na gestão',
     description:
-      'na eficiência do uso de recursos hídricos com a utilização das soluções de monitoramento de irrigação da Tinoagro;',
+      'de estoque, evitando excessos e escassez de produtos, resultando em uma operação mais eficiente.',
   },
+  {
+    title: 'Maior fidelidade',
+    description: 'dos clientes e crescimento da participação de mercado por meio de uma oferta de produtos e serviços mais alinhada com as preferências dos clientes.'
+  }
 ];
 
 export const Results: React.FC = () => {
   return (
-    <div className="container mt-6 flex max-w-screen-lg flex-col gap-10 lg:gap-20">
-      <div className="flex flex-col gap-8">
+    <article
+      id="results"
+      className="container mt-6 flex max-w-screen-lg flex-col gap-10 lg:gap-20"
+    >
+      <div className="flex flex-col gap-6 sm:gap-8">
         <div className="h-3 w-3 rounded-full bg-green" />
-        <h2 className="w-1/3 text-2xl font-bold leading-snug sm:text-4xl">
+        <h1 className="w-1/3 text-2xl font-bold leading-snug sm:text-4xl">
           Nossos resultados
-        </h2>
+        </h1>
       </div>
 
-      <div className="relative flex flex-col items-center gap-20 lg:flex-row lg:gap-44">
+      <div className="relative flex flex-col items-center gap-10 sm:gap-20 lg:flex-row lg:gap-44">
         <Image src={grass} alt="grass" className="w-52 object-contain" />
         <Arrow className="absolute left-40  hidden lg:flex" />
 
-        <ul className="flex w-full gap-10 lg:w-auto">
+        <ul className="flex w-full gap-10 overflow-x-auto py-5 sm:py-0 lg:w-auto lg:overflow-x-auto custom-scroll">
           {React.Children.toArray(
             results.map(({ description, title }) => (
-              <li className="h-32 min-w-[13.75rem] opacity-40 first:opacity-100  lg:w-[11vw]">
+              <li className="h-40 min-w-[13.75rem] lg:w-[11vw]">
                 <p className="line-clamp-4 flex flex-col text-sm">
                   <span className="inline-block font-bold  text-green">
                     {title}
@@ -56,6 +63,6 @@ export const Results: React.FC = () => {
           )}
         </ul>
       </div>
-    </div>
+    </article>
   );
 };

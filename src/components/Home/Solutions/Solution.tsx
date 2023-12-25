@@ -1,3 +1,4 @@
+'use client';
 import { Url } from 'next/dist/shared/lib/router/router';
 import Link from 'next/link';
 
@@ -50,23 +51,23 @@ export const Solution: React.FC<Props> = ({
       className="
       rounded-2xl bg-gradient-to-tr from-[rgba(255,255,255,0.17)] from-[-15%] via-[rgba(25,70,73,0.17)] via-65% to-[rgba(10,19,70,0.17)] to-95% p-6"
     >
-      <section className="flex h-full flex-col gap-6 text-xs">
+      <article className="flex h-full flex-col gap-6 text-xs">
         <header className="flex w-[72.5%] flex-col gap-1">
-          <motion.h1
+          <motion.h2
             variants={titleVariants}
             className="h-16 text-xl font-bold md:text-2xl"
           >
             {title}
-          </motion.h1>
-          <h2 className="order-first text-green">Tinoagro</h2>
+          </motion.h2>
+          <p className="order-first text-green">Tinoagro</p>
         </header>
-        <p className="h-[7rem] w-11/12">{description}</p>
+        <p className="h-40 w-11/12">{description}</p>
         <footer className="mt-auto">
           <Link href={detailsHref} className="font-semibold">
             + <span className="text-green">Detalhes</span>
           </Link>
         </footer>
-      </section>
+      </article>
     </motion.li>
   );
 };

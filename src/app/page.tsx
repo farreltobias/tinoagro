@@ -12,16 +12,22 @@ import { Results } from '@/components/Home/Results';
 import { Slides } from '@/components/Home/Slides';
 import { Solutions } from '@/components/Home/Solutions';
 import { Working } from '@/components/Home/Working';
+import { SidebarProvider } from '@/contexts/SidebarContext';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 const Home: NextPage = () => {
+  const background =
+    'bg-gradient-to-br bg-no-repeat from-blue-darker from-20% via-green-darker via-65% to-green-dark';
+
   return (
-    <article>
+    <>
       <CallToAction />
       <Infromation />
       <Grass />
       <Slides />
       <Process />
-      <div className="overflow-hidden rounded-t-[4rem] bg-blue pb-64 pt-32 text-white">
+      <div className="flex w-full flex-col overflow-hidden bg-blue pb-32 pt-20 text-white sm:rounded-t-[4rem] sm:pb-64 sm:pt-32">
         <Solutions />
         <Working />
         <Results />
@@ -29,7 +35,7 @@ const Home: NextPage = () => {
 
       <Contact />
       <About />
-    </article>
+    </>
   );
 };
 

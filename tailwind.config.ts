@@ -55,6 +55,13 @@ export default {
       //   'main-linear':
       //     'linear-gradient(127.29deg, rgba(0, 13, 82, 0.97) 20.55%, rgba(5, 107, 59, 0.97) 64.05%, rgba(11, 205, 36, 0.97) 109.13%);',
       // },
+      scrollbar: {
+        width: '6px', // Largura da barra de rolagem
+      },
+      scrollbarThumb: {
+        backgroundColor: '#4f4f4f', // Cor do preenchimento da barra de rolagem
+        borderRadius: '3px', // Raio de borda da barra de rolagem
+      },
       minHeight: {
         inherit: 'inherit',
       },
